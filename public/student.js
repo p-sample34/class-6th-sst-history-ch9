@@ -1,7 +1,7 @@
 async function loadQuestions() {
   try {
     // Fetch questions from the backend API
-    const res = await fetch('https://student-teacher-api.onrender.com/questions');
+    const res = await fetch('https://class-6th-sst-history-ch9.onrender.com/questions');
     if (!res.ok) {
       throw new Error('Network response was not ok');
     }
@@ -49,7 +49,7 @@ async function submitAnswers() {
 
   try {
     // Submit the answers to the backend API
-    const res = await fetch('https://student-teacher-api.onrender.com/submit-answers', {
+    const res = await fetch('https://class-6th-sst-history-ch9.onrender.com/submit-answers', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ studentName, responses })
